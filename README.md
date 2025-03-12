@@ -1,4 +1,4 @@
-# m0487ed_ra1_a
+# m0487ed_a
 RA1. Reconeix els elements i les eines que intervenen en el desenvolupament d'un programa informàtic, analitzant-ne les característiques i les fases en què actuen fins a arribar a la posada en funcionament.
 
 RA2. Avalua entorns integrats de desenvolupament analitzant-ne les característiques per editar codi font i generar executables.
