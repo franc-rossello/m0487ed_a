@@ -4,7 +4,7 @@
 <head>
  <meta charset="utf-8">
  <meta content="width=device-width, initial-scale=1.0" name="viewport">
- <title>RA14 - Algoritmes SPICY</title>
+ <title>RA14 - Seguretat Gestió</title>
  <meta name="description" content="">
  <meta name="keywords" content="">
 
@@ -74,50 +74,75 @@
         <div class="row gy-5">
           <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
             <img src="../assets/img/services.jpg" alt="" class="img-fluid services-img">
-            <h3>Optimització i Eficiència</h3><br>
+            <h3>Seguretat i Gestió de Recursos</h3><br>
             <p>
-              El codi intermedi no només actua com a pont entre el codi font i la màquina virtual, sinó que permet aplicar <strong>tècniques d'optimització avançades</strong> per millorar el rendiment. Aquestes optimitzacions es realitzen en dues etapes clau:
+              Les màquines virtuals utilitzen el codi intermedi com a capa per implementar <strong>mecanismes de seguretat avançats</strong> i <strong>gestionar recursos de forma segura</strong>, garantint estabilitat i protecció contra errors o atacs.
             </p><br>
             
-            <h4>Tècniques d'Optimització en Codi Intermedi</h4>
+            <h4>Mecanismes de Seguretat</h4>
             <ul>
-              <li><i class="bi bi-check-circle"></i> <span><strong>Reducció de Redundàncies:</strong><br>
-                - Eliminació de codi mort (blocs inaccessibles).<br>
-                - Fusió de constants (ex: <code>3 + 5 → 8</code>).<br>
-                - Propagació de constants a variables.</span></li><br>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Verificació de Bytecode:</strong><br>
+                - Anàlisi estàtic previ a l'execució per detectar operacions perilloses (ex: accessos a memòria no autoritzats).<br>
+                - <em>Exemple</em>: La JVM verifica les classes Java abans de carregar-les.</span></li><br>
               
-              <li><i class="bi bi-check-circle"></i> <span><strong>Inlining de Funcions:</strong><br>
-                - Incrustació de funcions petites al codi que les crida (ex: mètodes <em>getters</em> en Java) per evitar càrrega de cridades.</span></li><br>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Sandboxing (Entorn Aïllat):</strong><br>
+                - Executa el codi en un espai restringit sense accés directe al hardware.<br>
+                - <em>Exemple</em>: Applets de Java executant-se en una zona segura.</span></li><br>
               
-              <li><i class="bi bi-check-circle"></i> <span><strong>Optimització de Bucles:</strong><br>
-                - <em>Loop unrolling</em>: Desplegar iteracions per reduir condicionals.<br>
-                - <em>Loop-invariant code motion</em>: Moure càlculs invariables fora del bucle.</span></li><br>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Control d'Accés Granular:</strong><br>
+                - Polítiques basades en permisos (ex: lectura/escriptura de fitxers).<br>
+                - <em>Exemple</em>: <code>SecurityManager</code> en Java o <code>Code Access Security</code> en .NET.</span></li><br>
               
-              <li><i class="bi bi-check-circle"></i> <span><strong>Anàlisi de Fluxe de Dades:</strong><br>
-                - Identificar variables no utilitzades o assignacions redundants.</span></li><br>
+              <li><i class="bi bi-check-circle"></i> <span><strong>Integritat del Codi:</strong><br>
+                - Signatura digital per assegurar que el bytecode no ha estat alterat.<br>
+                - <em>Exemple</em>: Certificats en assemblies de .NET.</span></li><br>
             </ul>
   
-            <h4>El Rol del Compilador JIT (Just-In-Time)</h4>
-            <p>El compilador JIT és clau per aconseguir eficiència en temps d'execució:</p>
+            <h4>Gestió de Recursos Controlada</h4>
             <ol>
-              <li><p><strong>Fase d'Interpretació:</strong> Execució inicial del bytecode sense optimitzacions.</p></li>
-              <li><p><strong>Detecció de "Hot Spots":</strong> Identifica les parts del codi més executades (ex: bucles intensius).</p></li>
-              <li><p><strong>Compilació a Codi Màquina:</strong> Converteix el codi intermedi a instruccions natives de la CPU, aplicant:</p>
+              <li><p><strong>Garbage Collection (Gestió Automàtica de Memòria):</strong></p>
                 <ul>
-                  <li><em>Especialització de tipus</em> (ex: optimitzar per a enters si una variable sempre és <code>int</code>).</li>
-                  <li><em>Inline Caching</em> per a mètodes polimòrfics (comú en Java).</li>
+                  <li><em>Mark and Sweep</em>: Marca objectes actius i esborra la memòria no utilitzada.</li>
+                  <li><em>Generational GC</em>: Divideix la memòria en generacions (jove/vella) per optimitzar recollida.</li>
+                  <li><em>Exemple</em>: El GC de la JVM (G1, ZGC) gestiona fins a terabytes de memòria.</li>
+                </ul>
+              </li><br>
+              
+              <li><p><strong>Gestió de Concurrència:</strong></p>
+                <ul>
+                  <li>Instruccions natives per a sincronització de fils (<code>monitorenter</code>/<code>monitorexit</code> en bytecode Java).</li>
+                  <li>Implementació de semàfors i monitors a nivell de màquina virtual.</li>
+                </ul>
+              </li><br>
+              
+              <li><p><strong>Control d'Excepcions:</strong></p>
+                <ul>
+                  <li>Taules d'excepcions en el bytecode que defineixen blocs <code>try/catch</code>.</li>
+                  <li>Assegura que errors no provocin caigudes del sistema complet.</li>
+                </ul>
+              </li><br>
+              
+              <li><p><strong>Alliberament de Recursos No-Manats:</strong></p>
+                <ul>
+                  <li>Patrons com <code>try-with-resources</code> (Java) o <code>using</code> (C#) per tancar fitxers/connexions automàticament.</li>
                 </ul>
               </li>
-              <li><p><strong>Reoptimització Dinàmica:</strong> Adapta el codi en temps real segons el comportament de l'aplicació.</p></li>
             </ol>
   
-            <h5>Exemple Pràctic: JVM HotSpot</h5>
-            <p>La màquina virtual de Java (<strong>JVM</strong>) utilitza el compilador HotSpot JIT per aplicar optimitzacions com:</p>
-            <ul>
-              <li>Eliminació de bloquejos redundants en fils d'execució.</li>
-              <li>Vectorització d'instruccions per a processament paral·lel.</li>
-              <li>Optimització de crides a mètodes virtuals.</li>
-            </ul>
+            <h5>Exemples Pràctics</h5>
+            <div class="example-box p-3 rounded">
+              <p>🛡️ <strong>JVM (Java Virtual Machine):</strong></p>
+              <ul>
+                <li>Bytecode inclou metadades per a verificació de tipus i control d'accés.</li>
+                <li>El <em>ClassLoader</em> carrega classes només si passen les comprovacions de seguretat.</li>
+              </ul>
+              
+              <p>🔒 <strong>.NET CLR (Common Language Runtime):</strong></p>
+              <ul>
+                <li>El CIL (Common Intermediate Language) permet <em>AppDomains</em> per aïllar aplicacions dins del mateix procés.</li>
+                <li>CAS (Code Access Security) defineix permisos per a cada assemblado.</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
