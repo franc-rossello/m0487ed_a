@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
 <head>
  <meta charset="utf-8">
  <meta content="width=device-width, initial-scale=1.0" name="viewport">
- <title>RA14 - Optimització Restringida</title>
+ <title>RA14 - Tipus de Màquines Virtuals</title>
  <meta name="description" content="">
  <meta name="keywords" content="">
-
 
  <!-- Favicons -->
  <link href="../assets/img/favicon.png" rel="icon">
  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-
  <!-- Fonts -->
  <link href="https://fonts.googleapis.com" rel="preconnect">
  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
- <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-
+ <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
 
  <!-- Vendor CSS Files -->
  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -28,25 +24,13 @@
  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
-
  <!-- Main CSS File -->
  <link href="../assets/css/main.css" rel="stylesheet">
-
-
- <!-- =======================================================
- * Template Name: Moderna
- * Template URL: https://bootstrapmade.com/free-bootstrap-template-corporate-moderna/
- * Updated: Aug 07 2024 with Bootstrap v5.3.3
- * Author: BootstrapMade.com
- * License: https://bootstrapmade.com/license/
- ======================================================== -->
 </head>
 <header id="header" class="header d-flex align-items-center fixed-top">
   <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
     <a href="index.html" class="logo d-flex align-items-center">
-      <!-- Uncomment the line below if you also wish to use an image logo -->
-      <!-- <img src="assets/img/logo.png" alt=""> -->
       <h1 class="sitename">M0487 Entorns de Desenvolupament</h1>
     </a>
 
@@ -66,66 +50,53 @@
 
   </div>
 </header>
-
 <body class="service-details-page">
-
-
  <header id="header" class="header d-flex align-items-center fixed-top">
    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
-
-
-     <a href="index.html" class="logo d-flex align-items-center">
-       <!-- Uncomment the line below if you also wish to use an image logo -->
-       <!-- <img src="assets/img/logo.png" alt=""> -->
-     </a>
+     <a href="index.html" class="logo d-flex align-items-center"></a>
      <nav id="navmenu" class="navmenu">
        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
      </nav>
    </div>
  </header>
+
  <main class="main">
-   <!-- Page Title -->
    <div class="page-title dark-background">
      <div class="container position-relative">
        <h1>RA-14 - Reconeix les característiques de la generació de codi intermedi per a la seva execució a màquines virtuals</h1>
      </div>
-   </div><!-- End Page Title -->
+   </div>
 
-
-   <!-- Service Details Section -->
    <section id="service-details" class="service-details section">
      <div class="container">
        <div class="row gy-5">
-           </div><!-- End Services List -->
-         </div>
          <div class="col-lg-8 ps-lg-5" data-aos="fade-up" data-aos-delay="200">
            <img src="../assets/img/services.jpg" alt="" class="img-fluid services-img">
-           <h3>OPTIMITZACIÓ RESTRINGIDA</h3><br>
+           <h3>TIPUS DE MÀQUINES VIRTUALS</h3><br>
            <p>
-            La optimització restringida en la generació de codi intermedi per a la seva execució en màquines virtuals es refereix a tècniques d'optimització que tenen en compte les limitacions i requeriments d'una màquina virtual específica. Aquesta optimització busca millorar el rendiment sense trencar la portabilitat del codi ni violar restriccions del sistema.
+            Les màquines virtuals (VM) permeten executar codi intermedi independentment del sistema operatiu o maquinari. Hi ha diferents tipus de màquines virtuals segons el seu funcionament i l'optimització que apliquen.
            </p><br>
            <ul>
-             <li><i class="bi bi-check-circle"></i> <span>Portabilitat: El codi intermedi no està lligat a un maquinari específic, sinó que pot executar-se en diferents plataformes a través d'una màquina virtual.</span></li><br>
-             <li><i class="bi bi-check-circle"></i> <span>Independència de l'arquitectura: Permet que el mateix codi intermedi sigui interpretat o compilat just-in-time (JIT) a diferents dispositius.</span></li><br>
-             <li><i class="bi bi-check-circle"></i> <span>Eficàcia en l'execució: L'ús d'optimitzacions com la compilació dinàmica pot millorar el rendiment sense perdre flexibilitat.</span></li><br>
+             <li><i class="bi bi-check-circle"></i> <span><strong>VM interpretatives:</strong> Executen el codi instrucció per instrucció, sense compilar-lo a codi natiu. Exemples: CPython, PHP.</span></li><br>
+             <li><i class="bi bi-check-circle"></i> <span><strong>VM amb JIT (Just-In-Time):</strong> Compilen el codi intermedi a codi natiu en temps d'execució per millorar la velocitat. Exemples: JVM (Java), CLR (.NET).</span></li><br>
+             <li><i class="bi bi-check-circle"></i> <span><strong>VM híbrides:</strong> Combinació d’interpretació i compilació JIT segons les necessitats del programa. Exemples: Dalvik (Android), PyPy.</span></li><br>
            </ul>
-           <p>Aquest tipus d'optimització s'enfoca a millorar el rendiment mantenint les restriccions pròpies de la màquina virtual. Algunes tècniques inclouen:</p><br>
+           <p>Comparació entre els diferents tipus de màquines virtuals:</p><br>
             <ol>
-            <li><p>Eliminació de codi mort: Es detecten i eliminen instruccions que no afecten el resultat final.</li></p><br>
-            <li><p>Optimització de bucles: Transformacions com l'especejament de bucles o la propagació de constants dins dels bucles poden reduir el nombre d'instruccions executades.</p></li><br>
-            <li><p>Gestió eficient de registres i memòria: Com que les màquines virtuals solen utilitzar una pila en lloc de registres, es poden aplicar tècniques per reduir l'ús excessiu de la pila.</p></li><br>
+            <li><p><strong>Rendiment:</strong> Les VM interpretatives són més lentes que les JIT, ja que executen cada instrucció una per una.</p></li><br>
+            <li><p><strong>Eficiència:</strong> Les VM amb JIT optimitzen el codi en temps real, fent que els programes s'executin més ràpid.</p></li><br>
+            <li><p><strong>Compatibilitat:</strong> Totes les VM permeten executar el mateix codi intermedi en diferents plataformes.</p></li><br>
           </ol>
          </div>
        </div>
      </div>
-   </section><!-- /Service Details Section -->
+   </section>
  </main>
+
  <footer id="footer" class="footer dark-background">
    <div class="container footer-top">
      <div class="row gy-4">
        <div class="col-lg-4 col-md-6 footer-about">
-         <a href="index.html" class="d-flex align-items-center">
-         </a>
          <div class="footer-contact pt-3">
            <p>Marc López i Cesc Molero</p>
            <p>Vilafranca del Penedès</p>
@@ -145,44 +116,14 @@
        </div>
      </div>
    </div>
-   <div class="container copyright text-center mt-4">
-     <p>© <span>Copyright</span> <strong class="px-1 sitename">Moderna</strong> <span>All Rights Reserved</span></p>
-     <div class="credits">
-       <!-- All the links in the footer should remain intact. -->
-       <!-- You can delete the links only if you've purchased the pro version. -->
-       <!-- Licensing information: https://bootstrapmade.com/license/ -->
-       <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
-       Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-     </div>
-   </div>
-
-
  </footer>
 
-
- <!-- Scroll Top -->
  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-
- <!-- Preloader -->
  <div id="preloader"></div>
-
-
- <!-- Vendor JS Files -->
  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
- <script src="../assets/vendor/php-email-form/validate.js"></script>
  <script src="../assets/vendor/aos/aos.js"></script>
  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
- <script src="../assets/vendor/purecounter/purecounter_vanilla.js"></script>
  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
- <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
- <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
- <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-
-
- <!-- Main JS File -->
  <script src="../assets/js/main.js"></script>
-
-
 </body>
 </html>
